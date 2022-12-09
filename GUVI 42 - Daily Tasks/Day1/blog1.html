@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>Write a blog on Difference between HTTP1.1 vs HTTP2</h1>
+    <p>
+      HTTP2 is much faster and more reliable than HTTP1.1,
+      <br />HTTP1.1 with the keep-alive header, it was possible to have
+      persistent connections. <br /><br />It allowed multiple requests/responses
+      per TCP connection. <br />Whereas HTTP2 Introduces the concept of
+      multiplexing that interleaves the requests and responses without
+      head-of-line blocking and does so over a single TCP connection.
+      <br /><br />HTTP/2 uses HPACK header compression algorithm that is
+      resilient to attacks like CRIME and utilizes static Huffman encoding.
+      <br />HTTP1.1 is relatively secure since it uses digest authentication,
+      NTLM authentication. <br /><br />Security concerns from previous versions
+      will continue to be seen in HTTP/2. However, it is better equipped to deal
+      with them due to new TLS features like connection error of type
+      Inadequate_Security. <br />Expands on the caching support by using
+      additional headers like cache-control, conditional headers like If-Match
+      and by using entity tags.<br /><br />
+      HTTP/2 With the server push feature if the client finds the resources are
+      already present in the cache, it can cancel the pushed stream.
+    </p>
+  </body>
+</html>
