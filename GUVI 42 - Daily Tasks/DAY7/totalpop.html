@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://restcountries.com/v3.1/all");
+      xhr.onload = function () {
+        var data = xhr.response;
+        var res = JSON.parse(data);
+        var result = res.reduce((acc, element) => element.population + acc, 0);
+        console.log(result); //7777721563
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

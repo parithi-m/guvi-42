@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Movie {
+        constructor(title, studio, rating) {
+          this.title = title;
+          this.studio = studio;
+          if (rating == undefined) {
+            this.rating = "PG";
+          } else {
+            this.rating = rating;
+          }
+        }
+        getPG(arr) {
+          let basetype = [];
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i].rating == "PG") {
+              basetype.push(arr[i]);
+            }
+          }
+          return basetype;
+        }
+      }
+
+      let movie1 = new Movie("casino royale", "Eon Prooductions", "PG");
+      let movie2 = new Movie("ABC", "XYZ", "PG56");
+      let movie3 = new Movie("ABC", "XYZ");
+      let movie4 = new Movie("ABC6", "XYZ1");
+      let movie5 = new Movie("ABC3", "XYZ3");
+      let movie6 = new Movie("ABC", "XYZ", "PG");
+      let array = [movie1, movie2, movie3, movie4, movie5, movie6];
+      console.log(movie6.getPG(array));
+    </script>
+  </body>
+</html>

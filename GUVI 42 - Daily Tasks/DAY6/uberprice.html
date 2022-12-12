@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //uber price is calculated on basis of
+      //base rate,rates for time and distance
+      //and surge cost(current demand for rides)
+      //baserate*distance*surgecost
+      class Uberprice {
+        constructor(distance, surgecost) {
+          this.distance = distance * 25;
+          this.surgecost = surgecost;
+        }
+        getPrice() {
+          return this.distance * this.surgecost;
+        }
+      }
+      var trip1 = new Uberprice(4, 1.5);
+      //(4*25*1.5
+      console.log(trip1.getPrice());
+    </script>
+  </body>
+</html>
